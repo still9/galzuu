@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Надтай болзох уу? 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="questionContainer" class="card">
+    <h1>Надтай болзох уу? 💘</h1>
+
+    <p class="date">Өнөөдөр: <span id="today"></span></p>
+
+    <div class="btns">
+      <button id="yesBtn" class="btn yes">Тийм</button>
+      <button id="noBtn" class="btn no">Үгүй</button>
+    </div>
+    <p class="hint"><em>Үгүй</em> товчийг дарж үз дээ 😉</p>
+  </main>
+
+  <div id="heartLoader" class="center hidden">
+    <div class="hearts">
+      <span>💗</span><span>💖</span><span>💘</span><span>💝</span>
+    </div>
+    <p>Хариуг чинь баталгаажуулж байна...</p>
+  </div>
+
+  <section id="resultContainer" class="center hidden">
+    <div class="result-card">
+      <div class="bears">🤍🐻‍❄️🤎🐻</div>
+      <h2>Мэдэж байсан шүү! <span class="yay">😍</span></h2>
+      <p>Чи миний өдрийг аварчихлаа.</p>
+      <button id="replayBtn" class="btn ghost">Дахин тоглох</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

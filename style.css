@@ -1,0 +1,66 @@
+*{box-sizing:border-box}
+:root{
+  --bg:#ffe8ef;
+  --card:#fff6fa;
+  --ink:#2a2a2a;
+  --yes:#28a745;
+  --no:#e03a5e;
+  --ghost:#222;
+}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background: linear-gradient(180deg, var(--bg), #fff);
+  color:var(--ink);
+}
+.card{
+  position:relative;
+  width:min(600px, 92vw);
+  margin:10vh auto 0;
+  background:var(--card);
+  border-radius:20px;
+  padding:32px 24px 56px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  text-align:center;
+}
+.card h1{ margin:0 0 8px; font-size: clamp(1.4rem, 3.8vw, 2.2rem); }
+.card .date{ margin:0 0 16px; opacity:.75 }
+.btns{ position:relative; height:120px; }
+.btn{
+  position:absolute;
+  padding:12px 22px;
+  border:none;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .2s ease;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+}
+.btn:active{ transform:scale(.98) }
+.btn.yes{ left:20%; top:40%; background:var(--yes); color:white }
+.btn.no{ left:60%; top:40%; background:var(--no); color:white }
+.hint{ opacity:.7; font-size:.9rem; margin-top:78px }
+
+.center{
+  position:fixed; inset:0; display:grid; place-items:center; text-align:center;
+  padding:24px;
+}
+.hidden{ display:none }
+.hearts{ font-size: clamp(2rem, 10vw, 4rem); animation: float 1.4s infinite ease-in-out }
+.hearts span{ display:inline-block; transform-origin: bottom; animation: pop .9s infinite }
+.hearts span:nth-child(2){ animation-delay:.15s }
+.hearts span:nth-child(3){ animation-delay:.3s }
+.hearts span:nth-child(4){ animation-delay:.45s }
+@keyframes float{50%{ transform: translateY(-6px)}}
+@keyframes pop{ 50%{ transform: translateY(-6px) scale(1.1)} }
+
+.result-card{
+  background:white; padding:28px 22px; border-radius:18px; width:min(560px,92vw);
+  box-shadow:0 12px 38px rgba(0,0,0,.12);
+}
+.result-card .bears{ font-size: clamp(2rem, 12vw, 4rem); line-height:1; }
+.result-card h2{ margin:.4rem 0 0 }
+.yay{ display:inline-block; animation:wink 1.5s infinite }
+@keyframes wink{ 40%{ transform: rotate(12deg) scale(1.15)} }
+.btn.ghost{ position:static; margin-top:14px; background:transparent; color:var(--ghost); border:2px solid var(--ghost) }
